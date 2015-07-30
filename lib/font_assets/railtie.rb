@@ -13,7 +13,7 @@ module FontAssets
       # else
       #   'Rack::Runtime'
       # end
-       insert_target = 'Rack::Runtime'
+       insert_target = 'ActionDispatch::Static'
 
       app.middleware.insert_before insert_target, FontAssets::Middleware, config.font_assets.origin, config.font_assets.options
     end
